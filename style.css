@@ -294,3 +294,38 @@ html {
     gap: 1rem;
   }
 }
+
+.service-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 200px;
+  margin: 1rem;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.service-box .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  width: 100%;
+}
+
+.service-diesel {
+  background-image: url('diesel.jpg');
+}
+
+.service-mahindra {
+  background-image: url('mahindra.jpg');
+}
+
+.service-paint {
+  background-image: url('paint.jpg');
+}
