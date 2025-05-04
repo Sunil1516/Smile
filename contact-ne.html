@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>सम्पर्क गर्नुहोस् - स्माईल अटो वर्कशप</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpg" alt="Smile Autos Logo" />
+    <div>
+      <h1>स्माईल अटो वर्कशप प्रा.लि.</h1>
+      <p>नेपालमा महेन्द्रा र डिजेल सवारीहरूको विशेषज्ञ मर्मत सेवा</p>
+    </div>
+  </div>
+  <nav>
+    <a href="index-ne.html">गृहपृष्ठ</a>
+    <a href="services-ne.html">सेवा</a>
+    <a href="about-ne.html">हाम्रो बारेमा</a>
+    <a href="contact-ne.html">सम्पर्क</a>
+  </nav>
+
+  <div class="language-switch" style="text-align:right; padding: 0.5rem;">
+    <a href="contact.html" style="background:#2e3d49; color:#fff; padding:6px 12px; border-radius:4px; text-decoration:none; margin-right:5px;">EN</a>
+    <a href="contact-ne.html" style="background:#0057a0; color:#fff; padding:6px 12px; border-radius:4px; text-decoration:none;">ने</a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>सम्पर्क गर्नुहोस्</h2>
+  <p>हामी तपाईंको सेवा गर्न सधैं तयार छौं। कुनै पनि जानकारी वा सहयोगको लागि सिधै सम्पर्क गर्नुहोस् वा हाम्रो वर्कशपमा आउनुहोस्।</p>
+
+  <div class="contact-details" style="margin-bottom: 2rem;">
+    <p><strong>📍 ठेगाना:</strong> स्माईल अटो वर्कशप प्रा.लि., काठमाडौँ, नेपाल</p>
+    <p><strong>📞 फोन:</strong> +977 9843841083</p>
+    <p><strong>✉️ इमेल:</strong> bijayagautam13579@gmail.com</p>
+    <p><strong>🕒 कार्य समय:</strong> २४ घण्टा</p>
+  </div>
+
+  <form id="contactForm" onsubmit="sendToWhatsApp(); return false;" style="max-width: 500px; margin: auto;">
+    <input type="text" id="name" placeholder="तपाईंको नाम" required style="width: 100%; padding: 10px; margin-bottom: 10px;" />
+    <input type="email" id="email" placeholder="तपाईंको इमेल" required style="width: 100%; padding: 10px; margin-bottom: 10px;" />
+    <textarea id="message" placeholder="तपाईंको सन्देश" required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
+    <button type="submit" style="padding: 10px 20px; background-color: #2e3d49; color: white; border: none;">सन्देश पठाउनुहोस्</button>
+  </form>
+</section>
+
+<section class="section">
+  <h2>हामी कहाँ छौं</h2>
+  <div style="display: flex; justify-content: center; padding: 1rem;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.508752987!2d85.34708877465674!3d27.73244997616823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb49d959b7d713%3A0xa90bee7c7e9fa528!2sSmile%20auto%20workshop%20pvt.ltd!5e0!3m2!1sen!2sau!4v1746197211316!5m2!1sen!2sau" 
+      width="100%" height="450" style="border:0; max-width: 800px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>📍 काठमाडौँमा आधारित | 📞 9843841083 | ✉️ bijayagautam13579@gmail.com</p>
+  <p>© 2025 स्माईल अटो वर्कशप प्रा.लि. सबै अधिकार सुरक्षित।</p>
+</footer>
+
+<script>
+  function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const text = `नमस्ते, म ${name} (${email}) हुँ।%0Aसन्देश: ${message}`;
+    const phone = "9779843841083";
+    const url = `https://wa.me/${phone}?text=${text}`;
+
+    window.open(url, "_blank");
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.section h2, .service-item, .service-box').forEach(el => {
+      el.style.opacity = '1';
+    });
+  });
+</script>
+
+</body>
+</html>
