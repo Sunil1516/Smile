@@ -33,7 +33,16 @@
       <p>Expert Mahindra & Diesel Vehicle Maintenance</p>
     </div>
   </div>
-  <nav>
+  
+  <button class="sidebar-toggle" onclick="toggleSidebar()" title="Open menu">☰</button>
+  
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
@@ -41,11 +50,58 @@
   </nav>
 
   <!-- Language Switch Buttons -->
-  <div class="language-switch" style="text-align: right; padding: 0.5rem;">
-    <a href="index.html" style="background:#2e3d49; color:#fff; padding:6px 12px; border-radius:4px; text-decoration:none; margin-right:5px;">EN</a>
-    <a href="index-ne.html" style="background:#0057a0; color:#fff; padding:6px 12px; border-radius:4px; text-decoration:none;">ने</a>
+  <div class="language-switch">
+    <a href="index.html">EN</a>
+    <a href="index-ne.html">ने</a>
   </div>
 </header>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
+  <div class="sidebar-header">
+    <h2>Menu</h2>
+  </div>
+  <nav class="sidebar-menu">
+    <a href="index.html" onclick="toggleSidebar()">🏠 Home</a>
+    <a href="services.html" onclick="toggleSidebar()">🛠️ Services</a>
+    <a href="about.html" onclick="toggleSidebar()">ℹ️ About</a>
+    <a href="contact.html" onclick="toggleSidebar()">📞 Contact</a>
+  </nav>
+</div>
+
+<!-- Sidebar Overlay -->
+<div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<script>
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+function toggleMenu() {
+  const navMenu = document.getElementById('navMenu');
+  navMenu.classList.toggle('active');
+}
+
+// Close menu when a link is clicked
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navMenu').classList.remove('active');
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  const header = document.querySelector('header');
+  const navMenu = document.getElementById('navMenu');
+  if (!header.contains(e.target)) {
+    navMenu.classList.remove('active');
+  }
+});
+</script>
 
 <section class="hero">
   <h1>Reliable Maintenance, Painting & Washing</h1>
