@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>हाम्रो बारेमा - स्माईल अटो वर्कशप</title>
+  <title>स्माईल अटो वर्कशप बारे - काठमाडौँमा महेन्द्रा विशेषज्ञ</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="स्माईल अटो वर्कशपको बारे जानुहोस्। बिजय गौतमले संचालित, काठमाडौँमा १५+ वर्षको अनुभव, महेन्द्रा र डिजेल विशेषज्ञ।" />
+  <meta name="keywords" content="अटो वर्कशप काठमाडौँ, महेन्द्रा विशेषज्ञ, डिजेल मेकानिक, अनुभवी सेवा, गाडी रक्षणार्थ" />
+  <meta name="author" content="Smile Autos Workshop Pvt. Ltd." />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="content-language" content="ne-NP" />
+  
+  <!-- Canonical URLs -->
+  <link rel="canonical" href="https://smileautoswork.shop/about-ne.html" />
+  <link rel="alternate" hreflang="en" href="https://smileautoswork.shop/about.html" />
+  <link rel="alternate" hreflang="ne" href="https://smileautoswork.shop/about-ne.html" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="स्माईल अटो वर्कशप बारे" />
+  <meta property="og:description" content="काठमाडौँमा विश्वस्त महेन्द्रा र डिजेल विशेषज्ञ सेवा।" />
+  <meta property="og:image" content="https://smileautoswork.shop/logo.jpg" />
+  <meta property="og:url" content="https://smileautoswork.shop/about-ne.html" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="स्माईल अटो - हाम्रो बारे" />
+  <meta name="twitter:description" content="काठमाडौँमा विश्वस्त अटो सेवा र मरम्मत।" />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,19 +42,6 @@
   </div>
   
   <button class="sidebar-toggle" onclick="toggleSidebar()" title="Open menu">☰</button>
-  
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  
-  <nav id="navMenu">
-    <a href="index-ne.html">गृहपृष्ठ</a>
-    <a href="services-ne.html">सेवा</a>
-    <a href="about-ne.html">हाम्रो बारेमा</a>
-    <a href="contact-ne.html">सम्पर्क</a>
-  </nav>
 
   <!-- Language Switch Buttons -->
   <div class="language-switch">
@@ -41,9 +52,9 @@
 
 <!-- Sidebar -->
 <div id="sidebar" class="sidebar">
-  <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   <div class="sidebar-header">
     <h2>मेनु</h2>
+    <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   </div>
   <nav class="sidebar-menu">
     <a href="index-ne.html" onclick="toggleSidebar()">🏠 गृहपृष्ठ</a>
@@ -63,27 +74,6 @@ function toggleSidebar() {
   sidebar.classList.toggle('active');
   overlay.classList.toggle('active');
 }
-
-function toggleMenu() {
-  const navMenu = document.getElementById('navMenu');
-  navMenu.classList.toggle('active');
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navMenu').classList.remove('active');
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  const header = document.querySelector('header');
-  const navMenu = document.getElementById('navMenu');
-  if (!header.contains(e.target)) {
-    navMenu.classList.remove('active');
-  }
-});
 </script>
 
 <section class="section">

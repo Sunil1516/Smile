@@ -3,7 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Smile Autos Workshop</title>
+  <title>About Smile Autos Workshop - Mahindra & Diesel Experts in Kathmandu</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn about Smile Autos Workshop - a trusted auto repair center in Kathmandu specializing in Mahindra and diesel vehicle servicing with expert technicians." />
+  <meta name="keywords" content="about Smile Autos, auto workshop Kathmandu, Mahindra specialists, diesel vehicle experts, vehicle maintenance Nepal" />
+  <meta name="author" content="Smile Autos Workshop Pvt. Ltd." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://smileautoswork.shop/about.html" />
+  <link rel="alternate" hreflang="en" href="https://smileautoswork.shop/about.html" />
+  <link rel="alternate" hreflang="ne" href="https://smileautoswork.shop/about-ne.html" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="About Smile Autos Workshop" />
+  <meta property="og:description" content="Expert Mahindra & diesel vehicle servicing in Kathmandu." />
+  <meta property="og:image" content="https://smileautoswork.shop/logo.jpg" />
+  <meta property="og:url" content="https://smileautoswork.shop/about.html" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Smile Autos Workshop" />
+  <meta name="twitter:description" content="Learn about our expert team and services." />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,19 +41,6 @@
   </div>
   
   <button class="sidebar-toggle" onclick="toggleSidebar()" title="Open menu">☰</button>
-  
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <!-- Language Switch Buttons -->
   <div class="language-switch">
@@ -41,9 +51,9 @@
 
 <!-- Sidebar -->
 <div id="sidebar" class="sidebar">
-  <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   <div class="sidebar-header">
     <h2>Menu</h2>
+    <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   </div>
   <nav class="sidebar-menu">
     <a href="index.html" onclick="toggleSidebar()">🏠 Home</a>
@@ -63,27 +73,6 @@ function toggleSidebar() {
   sidebar.classList.toggle('active');
   overlay.classList.toggle('active');
 }
-
-function toggleMenu() {
-  const navMenu = document.getElementById('navMenu');
-  navMenu.classList.toggle('active');
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navMenu').classList.remove('active');
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  const header = document.querySelector('header');
-  const navMenu = document.getElementById('navMenu');
-  if (!header.contains(e.target)) {
-    navMenu.classList.remove('active');
-  }
-});
 </script>
 
 <section class="section">

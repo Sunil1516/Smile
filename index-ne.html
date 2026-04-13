@@ -3,7 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>स्माईल अटो वर्कशप प्रा.लि. - काठमाडौँ</title>
+  <title>स्माईल अटो वर्कशप - काठमाडौँमा महेन्द्रा र डिजेल सेवा | २४/७</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="स्माईल अटो वर्कशपमा काठमाडौँमा 24/7 महेन्द्रा र डिजेल गाडी सेवा। आधुनिक सुविधा, अनुभवी मेकानिक र उच्च गुणस्तरको कार्य।" />
+  <meta name="keywords" content="महेन्द्रा सेवा काठमाडौँ, डिजेल गाडी मरम्मत, अटो रिपेयर, गाडी रक्षणार्थ, ईंजिन डायग्नोस्टिक्स" />
+  <meta name="author" content="Smile Autos Workshop Pvt. Ltd." />
+  <meta name="robots" content="index, follow, snippet, imageindex, noodp" />
+  <meta http-equiv="content-language" content="ne-NP" />
+  <meta name="language" content="Nepali" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Canonical URLs -->
+  <link rel="canonical" href="https://smileautoswork.shop/index-ne.html" />
+  <link rel="alternate" hreflang="en" href="https://smileautoswork.shop/" />
+  <link rel="alternate" hreflang="ne" href="https://smileautoswork.shop/index-ne.html" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="स्माईल अटो वर्कशप" />
+  <meta property="og:description" content="काठमाडौँमा १ नम्बरको महेन्द्रा र डिजेल गाडी सेवा। २४/७ खुला।" />
+  <meta property="og:image" content="https://smileautoswork.shop/logo.jpg" />
+  <meta property="og:url" content="https://smileautoswork.shop/index-ne.html" />
+  <meta property="og:site_name" content="Smile Autos Workshop" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="स्माईल अटो वर्कशप" />
+  <meta name="twitter:description" content="काठमाडौँमा 24/7 गाडी सेवा। महेन्द्रा र डिजेल विशेषज्ञ।" />
+  <meta name="twitter:image" content="https://smileautoswork.shop/logo.jpg" />
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "स्माईल अटो वर्कशप",
+    "image": "https://smileautoswork.shop/logo.jpg",
+    "description": "काठमाडौँमा महेन्द्रा र डिजेल गाडी सेवा र मरम्मत।",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kathmandu",
+      "addressLocality": "Kathmandu",
+      "addressCountry": "NP"
+    },
+    "telephone": "+977 9843841083",
+    "email": "bijayagautam13579@gmail.com",
+    "url": "https://smileautoswork.shop",
+    "priceRange": "०ः०००-५०,०००",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,19 +74,6 @@
   </div>
   
   <button class="sidebar-toggle" onclick="toggleSidebar()" title="Open menu">☰</button>
-  
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  
-  <nav id="navMenu">
-    <a href="index-ne.html">होम</a>
-    <a href="services-ne.html">सेवा</a>
-    <a href="about-ne.html">हाम्रो बारेमा</a>
-    <a href="contact-ne.html">सम्पर्क</a>
-  </nav>
 
   <!-- Language Switch Buttons -->
   <div class="language-switch">
@@ -41,9 +84,9 @@
 
 <!-- Sidebar -->
 <div id="sidebar" class="sidebar">
-  <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   <div class="sidebar-header">
     <h2>मेनु</h2>
+    <button class="close-sidebar" onclick="toggleSidebar()" title="Close menu">✕</button>
   </div>
   <nav class="sidebar-menu">
     <a href="index-ne.html" onclick="toggleSidebar()">🏠 होम</a>
@@ -63,27 +106,6 @@ function toggleSidebar() {
   sidebar.classList.toggle('active');
   overlay.classList.toggle('active');
 }
-
-function toggleMenu() {
-  const navMenu = document.getElementById('navMenu');
-  navMenu.classList.toggle('active');
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navMenu').classList.remove('active');
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  const header = document.querySelector('header');
-  const navMenu = document.getElementById('navMenu');
-  if (!header.contains(e.target)) {
-    navMenu.classList.remove('active');
-  }
-});
 </script>
 
 <section class="hero">
